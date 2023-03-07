@@ -42,12 +42,12 @@ int saisir(int remplissage, int table[9][9]){
     int v;
 
     do {
-        printf("Enter the index i: ");
+        printf("Enter the index j: "); //i and j where switch throughout the program so i = j and j = i
         scanf("%i", &i);
     }while (i > 10 || i < 0);
 
     do {
-        printf("\nEnter the index j: ");
+        printf("\nEnter the index i: "); //i and j where switch throughout the program so i = j and j = i
         scanf("%i", &j);
     }while(j > 10 || j < 0);
 
@@ -62,10 +62,12 @@ int saisir(int remplissage, int table[9][9]){
     else{
         table[i][j] = v;
         remplissage += 1;
-        if(verifierRegion(i, j, table) == 0 || verifierLigneColonne(i, 0, table) == 0 || verifierLigneColonne(j, 1, table) == 0){
+        int x = i - (i % 3);
+        int y = j - (j % 3);
+        if(verifierRegion(x, y, table) == 0 || verifierLigneColonne(i, 0, table) == 0 || verifierLigneColonne(j, 1, table) == 0){
             table[i][j] = 0;
             remplissage -= 1;
-            printf("\nThe entered value is not valid \n \n");
+            printf("\nThe entered value is not valid \n\n");
         }
     }
 
