@@ -13,7 +13,6 @@ Pour un entier aléatoire entre 0 et 1 il faut donc faire rand() %2
 voir dans la methode main.
 */
 
-
 // Ecrire la fonction generer(), elle prend en paramètre la grille et renvoie le nombre d'éléments non nuls
 
 // Ce lien vous sera utile : https://www.geeksforgeeks.org/pass-2d-array-parameter-c/
@@ -212,8 +211,8 @@ int main(){
 
     int random = rand() % 9 + 1; 
     int table[9][9] = {{0,9,0,2,0,0,6,0,5},{3,2,0,0,0,7,0,0,0},{0,7,0,9,0,5,0,0,8},
-                       {0,1,0,0,0,0,0,0,0},{0,0,7,0,0,0,0,9,4},{6,0,0,0,0,0,0,0,0},
-                       {0,0,8,0,0,0,0,0,7},{0,3,0,4,9,1,5,0,0},{0,0,0,0,0,3,0,0,0}};
+                        {0,1,0,0,0,0,0,0,0},{0,0,7,0,0,0,0,9,4},{6,0,0,0,0,0,0,0,0},
+                        {0,0,8,0,0,0,0,0,7},{0,3,0,4,9,1,5,0,0},{0,0,0,0,0,3,0,0,0}};
 
     for(int z=0;z<9; ++z) //first display the unfilled table
     {
@@ -226,7 +225,7 @@ int main(){
 
     int remplissage = generer(table);
 
-    while(remplissage < 89){
+    while(remplissage < 81){
 
         remplissage = saisir(remplissage, table);
     
