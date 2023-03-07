@@ -82,16 +82,16 @@ Les constantes HORIZ de valeur 0 et VERT de valeur 1 sont à définir.
 */
 
 int verifierLigneColonne(int num, const int dir, int table[9][9]){
-    int values[10][2] = {{1, 0}, {2, 0}, {3, 0}, {4, 0}, {5, 0}, {6, 0}, {7, 0}, {8, 0}, {9, 0}, {0, 0}};
+    int values[9][2] = {{1, 0}, {2, 0}, {3, 0}, {4, 0}, {5, 0}, {6, 0}, {7, 0}, {8, 0}, {9, 0}};
     for(int i = 0; i < 9; i++){
         if(dir == 0){
-            for(int h = 0; h < 10; h++){
+            for(int h = 0; h < 9; h++){
                 if(table[num][i] == values[h][0]){
                     values[h][1] += 1;
                 }
             }
         }else{
-            for(int a = 0; a < 10; a++){
+            for(int a = 0; a < 9; a++){
                 if(table[i][num] == values[a][0]){
                     values[a][1] += 1;
                 }
@@ -113,12 +113,12 @@ et qui renvoie 1 si la région est correctement remplie, 0 sinon.
 */
 
 int verifierRegion(int k, int l, int table[9][9]){
-    int values[10][2] = {{1, 0}, {2, 0}, {3, 0}, {4, 0}, {5, 0}, {6, 0}, {7, 0}, {8, 0}, {9, 0}, {0, 0}};
+    int values[9][2] = {{1, 0}, {2, 0}, {3, 0}, {4, 0}, {5, 0}, {6, 0}, {7, 0}, {8, 0}, {9, 0}};
     int x = k;
     int y = l;
     for(int i = 0; i < 3; i++){
         for(int j = 0; j < 3; j++){
-            for(int index = 0; index < 10; index++){
+            for(int index = 0; index < 9; index++){
                 if(table[x][y] == values[index][0]){
                     values[index][1] += 1;
                 } 
